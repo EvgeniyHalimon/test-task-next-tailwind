@@ -1,0 +1,84 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "make": "Ford",
+      "model": "F-150",
+      "description": "A reliable and powerful pickup truck for heavy-duty tasks.",
+      "cost": "35000",
+      "img": "https://i.infocar.ua/i/12/6467/1400x936.jpg"
+    },
+    {
+      "id": 2,
+      "make": "Toyota",
+      "model": "Corolla",
+      "description": "A compact and fuel-efficient sedan suitable for daily commuting.",
+      "cost": "22000",
+      "img": "https://i.infocar.ua/i/2/2946/86036/1920x.jpg"
+    },
+    {
+      "id": 3,
+      "make": "Tesla",
+      "model": "Model 3",
+      "description": "An all-electric sedan with advanced autopilot features.",
+      "cost": "45000",
+      "img": "https://i.infocar.ua/i/12/5590/1400x700.jpg"
+    },
+    {
+      "id": 4,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "description": "A classic American muscle car with impressive performance.",
+      "cost": "40000",
+      "img": "https://i.infocar.ua/i/12/5488/1400x700.jpg"
+    },
+    {
+      "id": 5,
+      "make": "BMW",
+      "model": "3 Series",
+      "description": "A luxury sedan offering excellent driving dynamics and comfort.",
+      "cost": "42000",
+      "img": "https://i.infocar.ua/i/12/6857/1400x700.jpg"
+    },
+    {
+      "id": 6,
+      "make": "Audi",
+      "model": "Q5",
+      "description": "A premium compact SUV with advanced technology and spacious interior.",
+      "cost": "50000",
+      "img": "https://i.infocar.ua/i/12/6360/1400x700.jpg"
+    },
+    {
+      "id": 7,
+      "make": "Honda",
+      "model": "Civic",
+      "description": "A reliable and efficient compact car with modern styling.",
+      "cost": "25000",
+      "img": "https://i.infocar.ua/i/12/5418/1400x700.jpg"
+    },
+    {
+      "id": 8,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "description": "A refined luxury sedan with exceptional features and design.",
+      "cost": "48000",
+      "img": "https://i.infocar.ua/i/12/6496/1400x700.jpg"
+    },
+    {
+      "id": 9,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "description": "A rugged SUV built for off-road adventures and exploration.",
+      "cost": "38000",
+      "img": "https://i.infocar.ua/i/12/5429/1400x700.jpg"
+    },
+    {
+      "id": 10,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "description": "A stylish and practical compact SUV with great value.",
+      "cost": "32000",
+      "img": "https://i.infocar.ua/i/12/7087/1400x700.jpg"
+    }
+  ]
+}
