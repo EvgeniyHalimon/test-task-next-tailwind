@@ -1,26 +1,24 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { fetchData } from '@/utils';
+import { Suspense } from 'react';
+import { Metadata } from 'next';
 import { Car, Loader } from '@/components';
+import { fetchData } from '@/utils';
 import { ICar } from '@/types/types';
 
-export default function Cars() {
-  const [cars, setCars] = useState<ICar[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const getCars = async () => {
-    const cars = await fetchData();
-    setCars(cars);
-    setLoading(false);
-  };
+export const metadata: Metadata = {
+  title: 'Cars - CarShop',
+  description: 'Explore our wide range of cars, from high-performance vehicles to eco-friendly options.',
+};
 
-  useEffect(() => {
-    getCars();
-  }, []);
+export default function CarsPage() {
+  return (
+    <Suspense fallback={<Loader />}>
+      <CarsList />
+    </Suspense>
+  );
+}
 
-  if (loading) {
-    return <Loader />;
-  }
+async function CarsList() {
+  const cars: ICar[] = await fetchData();
 
   return (
     <div className="flex gap-10 flex-wrap px-6 py-10">
@@ -30,3 +28,4 @@ export default function Cars() {
     </div>
   );
 }
+

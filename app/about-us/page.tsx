@@ -1,8 +1,16 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - CarShop',
+  description:
+    'Learn more about CarShop - your trusted partner in finding the perfect car. Discover our mission, values, and commitment to customer satisfaction.',
+};
+
 export default function AboutUs() {
   return (
     <section className="flex flex-col items-center sm:items-start px-6 py-10 gap-10 bg-slate-950 min-h-screen">
-      <div className=" mx-auto ">
-        <h1 className="text-4xl text-center  self-center font-bold mb-4 text-yellow-500">
+      <div className="mx-auto">
+        <h1 className="text-4xl text-center self-center font-bold mb-4 text-yellow-500">
           About Us
         </h1>
         <p className="text-gray-600 text-lg">
