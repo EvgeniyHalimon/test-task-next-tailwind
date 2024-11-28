@@ -5,15 +5,15 @@ import { fetchCarById } from '@/utils';
 import { Loader } from '@/components';
 
 interface CarPageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata({
   params,
 }: CarPageProps): Promise<Metadata> {
-  const car = await fetchCarById(Number(params.id));
+  const id = (await params).id;
+
+  const car = await fetchCarById(Number(id));
 
   if (!car) {
     return {
@@ -53,9 +53,9 @@ async function CarDetails({ id }: { id: string }) {
           <Image
             src={car.img}
             alt={`${car.make}-${car.model}-img`}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-md"
+            width={1400}
+            height={700}
+            className="rounded-lg shadow-md object-cover"
             placeholder="blur"
             blurDataURL={car.img}
           />
@@ -80,10 +80,11 @@ async function CarDetails({ id }: { id: string }) {
   );
 }
 
-export default function CarPage({ params }: CarPageProps) {
+export default async function CarPage({ params }: CarPageProps) {
+  const { id } = await params;
   return (
     <Suspense fallback={<Loader />}>
-      <CarDetails id={params.id} />
+      <CarDetails id={id} />
     </Suspense>
   );
 }
